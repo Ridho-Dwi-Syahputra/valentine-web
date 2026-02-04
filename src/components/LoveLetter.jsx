@@ -59,6 +59,7 @@ export default function LoveLetter() {
         className="flex items-center justify-center w-full max-w-3xl mx-auto"
       >
         <AnimatePresence mode="wait">
+          <br></br>
           {!isOpen ? (
             <motion.div
               key="envelope"
@@ -76,9 +77,10 @@ export default function LoveLetter() {
               animate={{ opacity: 1, y: 0, rotateX: 0 }}
               exit={{ opacity: 0, y: -50 }}
               transition={{ duration: 0.8, type: "spring", bounce: 0.3 }}
-              className="bg-white/90 backdrop-blur-sm rounded-2xl p-10 sm:p-12 md:p-14 shadow-2xl border border-pink-100 max-w-2xl mx-auto"
+              className="bg-white/90 backdrop-blur-sm rounded-2xl p-10 sm:p-12 md:p-14 shadow-2xl border border-pink-100 w-full max-w-3xl mx-auto flex flex-col items-center"
             >
               {/* Letter Header */}
+              <br></br>
               <div className="flex justify-center mb-10">
                 <motion.div
                   animate={{ scale: [1, 1.2, 1] }}
@@ -97,7 +99,7 @@ export default function LoveLetter() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
-                className="font-cursive text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed whitespace-pre-line text-center select-none pointer-events-none px-16 sm:px-20 md:px-24"
+                className="font-cursive text-base sm:text-lg md:text-xl text-gray-600 leading-relaxed whitespace-pre-line text-center select-none pointer-events-none max-w-2xl mx-auto px-4"
               >
                 {letterContent}
               </motion.div>
